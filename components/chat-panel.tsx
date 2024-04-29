@@ -74,7 +74,7 @@ export function ChatPanel({
                   index > 1 && 'hidden md:block'
                 }`}
                 onClick={async () => {
-                  setMessages(currentMessages => [
+                  setMessages((currentMessages: Array<{id: string, display: JSX.Element}>) => [
                     ...currentMessages,
                     {
                       id: nanoid(),
@@ -86,7 +86,7 @@ export function ChatPanel({
                     example.message
                   )
 
-                  setMessages(currentMessages => [
+                  setMessages((currentMessages: Array<{id: string, display: JSX.Element}>) => [
                     ...currentMessages,
                     responseMessage
                   ])
