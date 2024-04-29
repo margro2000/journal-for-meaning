@@ -36,24 +36,24 @@ export function ChatPanel({
 
   const exampleMessages = [
     {
-      heading: 'What are the',
-      subheading: 'trending memecoins today?',
-      message: `What are the trending memecoins today?`
+      heading: 'How can I',
+      subheading: 'take time to connect with God today?',
+      message: `How can I take time to connect with God today?`
     },
     {
-      heading: 'What is the price of',
-      subheading: '$DOGE right now?',
-      message: 'What is the price of $DOGE right now?'
+      heading: 'What is the',
+      subheading: 'purpose of my life?',
+      message: 'What is purpose of my life?'
     },
     {
-      heading: 'I would like to buy',
-      subheading: '42 $DOGE',
-      message: `I would like to buy 42 $DOGE`
+      heading: 'What do I',
+      subheading: 'feel greatful for today?',
+      message: `feel greatful for today?`
     },
     {
       heading: 'What are some',
-      subheading: `recent events about $DOGE?`,
-      message: `What are some recent events about $DOGE?`
+      subheading: `steps I can track to reach my goals?`,
+      message: `What are some steps I can track to reach my goals?`
     }
   ]
 

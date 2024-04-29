@@ -3,6 +3,7 @@ import { UseChatHelpers } from 'ai/react'
 import { Button } from '@/components/ui/button'
 import { ExternalLink } from '@/components/external-link'
 import { IconArrowRight } from '@/components/ui/icons'
+import { Typewriter } from 'nextjs-simple-typewriter'
 
 const exampleMessages = [
   {
@@ -23,30 +24,38 @@ export function EmptyScreen() {
   return (
     <div className="mx-auto max-w-2xl px-4">
       <div className="flex flex-col gap-2 rounded-lg border bg-background p-8">
-        <h1 className="text-lg font-semibold">
-          Welcome to Next.js AI Chatbot!
-        </h1>
-        <p className="leading-normal text-muted-foreground">
-          This is an open source AI chatbot app template built with{' '}
-          <ExternalLink href="https://nextjs.org">Next.js</ExternalLink>, the{' '}
-          <ExternalLink href="https://sdk.vercel.ai">
-            Vercel AI SDK
-          </ExternalLink>
-          , and{' '}
-          <ExternalLink href="https://vercel.com/storage/kv">
-            Vercel KV
-          </ExternalLink>
-          .
-        </p>
-        <p className="leading-normal text-muted-foreground">
-          It uses{' '}
-          <ExternalLink href="https://vercel.com/blog/ai-sdk-3-generative-ui">
-            React Server Components
-          </ExternalLink>{' '}
-          to combine text with generative UI as output of the LLM. The UI state
-          is synced through the SDK so the model is aware of your interactions
-          as they happen.
-        </p>
+      <p className="text-3xl lg:text-4xl !leading-tight mx-auto max-w-xl text-center">
+        Journal and be <strong>heard</strong> with {" "}
+        <a
+          href="https://supabase.com/?utm_source=create-next-app&utm_medium=template&utm_term=nextjs"
+          target="_blank"
+          className="font-bold hover:underline bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent"
+          rel="noreferrer"
+        >
+          Personalized Prompts
+        </a>
+        
+        <div className="text-2xl">
+          <br />
+        <Typewriter
+            words={['Hey, how are you feeling today?', 'What are you greatful for today?', 'Where drives your spirituality?', 'Reflect on how far you have moved towards your goals you set last month']}
+            loop={1000000}
+            cursor
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={1000}
+          />
+</div>
+<br/>
+</p>
+<p className="leading-normal text-muted-foreground text-center">
+          Connect with yourself and God today by journaling with personalized prompts to help expand and focus your thinking. 
+         </p>
+
+         <p className="leading-normal text-muted-foreground text-center">
+<strong>Listen to God's voice and boldy enter into the unknown</strong>.
+         </p>
+         
       </div>
     </div>
   )
