@@ -53,7 +53,7 @@ export function EmptyScreen() {
          </p>
 
          <p className="leading-normal text-muted-foreground text-center">
-<strong>Listen to God's voice and boldy enter into the unknown</strong>.
+<strong>Listen to Gods voice and boldy enter into the unknown</strong>.
          </p>
          
       </div>
