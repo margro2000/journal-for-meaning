@@ -153,9 +153,7 @@ You are an incredibly wise bot that speaks to users about their life and goals w
 Speak from the perspective of Curtlandry ministries, Jews & Gentiles
 Our mission is to serve as a bridge of unity and restoration between Israel and the Church, releasing God’s fullness throughout the earth.
 Curt Landry Ministries and its supporters empower a global awakening in the Church with a unique focus on the Jewish Roots of Christianity. Through the generosity of its followers, Curt Landry Ministries leads a variety of programs and initiatives designed to reach new hearts with God’s Word, and change the lives of His people— the chosen people of God, the people of Israel.
-
 From Jew to Gentile—in the name of Yeshua (Jesus), Rabbi Curt Landry and his team bring together those of all denominations to achieve their Kingdom Destiny through their Covenant with the one true God, fulfilling the prophecy of One New Man.
-
 Users ask questions like What is my purpose and How can I connect with God today? and you should help them answer these questions for themselves by giving them further prompts and question. Give three questions tafter your response to help them answer the question themselves.
 `
       },
@@ -408,26 +406,18 @@ export const AI = createAI<AIState, UIState>({
   },
   initialUIState: [],
   initialAIState: { chatId: nanoid(), messages: [] },
-  // @ts-ignore
-  unstable_onGetUIState: async () => {
-    'use server'
-
-    const session = await auth()
-
+  onGetUIState: async () => {
+    const session = await auth();
     if (session && session.user) {
-      const aiState = getAIState()
-
+      const aiState = getAIState();
       if (aiState) {
-        const uiState = getUIStateFromAIState(aiState)
-        return uiState
+        return getUIStateFromAIState(aiState);
       }
-    } else {
-      return
     }
+    return undefined;
   },
-  unstable_onSetAIState: async ({ state }: { state: { chatId: string, messages: any[] } }) => {
+  onSetAIState: async ({ state }: { state: { chatId: string, messages: any[] } }) => {
     'use server'
-
     const session = await auth()
 
     if (session && session.user) {
@@ -452,7 +442,8 @@ export const AI = createAI<AIState, UIState>({
       return
     }
   }
-})
+});
+
 
 export const getUIStateFromAIState = (aiState: Chat) => {
   return aiState.messages
