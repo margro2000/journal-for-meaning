@@ -53,7 +53,7 @@ export function ChatPanel({
     {
       heading: 'What are some',
       subheading: `steps I can track to reach my goals?`,
-      message: `What are some steps I can track to reach my goals?`
+      message: `What are some steps I can track to reach my goals`
     }
   ]
 
@@ -74,7 +74,7 @@ export function ChatPanel({
                   index > 1 && 'hidden md:block'
                 }`}
                 onClick={async () => {
-                  setMessages((currentMessages: Array<{id: string, display: JSX.Element}>) => [
+                  setMessages(currentMessages => [
                     ...currentMessages,
                     {
                       id: nanoid(),
@@ -86,7 +86,7 @@ export function ChatPanel({
                     example.message
                   )
 
-                  setMessages((currentMessages: Array<{id: string, display: JSX.Element}>) => [
+                  setMessages(currentMessages => [
                     ...currentMessages,
                     responseMessage
                   ])
