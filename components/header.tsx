@@ -55,7 +55,15 @@ export function Header() {
           <UserOrLogin />
         </React.Suspense>
       </div>
-      <div className="flex items-center justify-end space-x-2">
+      <p> Product of{' '}
+      <strong>
+      <a
+      href="https://www.curtlandry.com/">
+         Curt Landry Ministries 
+        </a>
+        </strong>
+        {' '} and <strong> LionSentry </strong> </p>
+      {/* <div className="flex items-center justify-end space-x-2">
         <a
           target="_blank"
           href="https://github.com/vercel/nextjs-ai-chatbot/"
@@ -74,7 +82,7 @@ export function Header() {
           <span className="hidden sm:block">Deploy to Vercel</span>
           <span className="sm:hidden">Deploy</span>
         </a>
-      </div>
+      </div> */}
     </header>
   )
 }
