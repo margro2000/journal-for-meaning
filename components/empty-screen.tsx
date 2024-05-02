@@ -25,15 +25,7 @@ export function EmptyScreen() {
     <div className="mx-auto max-w-2xl px-4">
       <div className="flex flex-col gap-2 rounded-lg border bg-background p-8">
       <p className="text-3xl lg:text-4xl !leading-tight mx-auto max-w-xl text-center">
-        Journal and be <strong>heard</strong> with {" "}
-        <a
-          href="https://supabase.com/?utm_source=create-next-app&utm_medium=template&utm_term=nextjs"
-          target="_blank"
-          className="font-bold hover:underline bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent"
-          rel="noreferrer"
-        >
-          Personalized Prompts
-        </a>
+      <strong>Ambassador Center Knowledge Hub</strong> 
         
         <div className="text-2xl">
           <br />
@@ -49,7 +41,7 @@ export function EmptyScreen() {
 <br/>
 </p>
 <p className="leading-normal text-muted-foreground text-center">
-          Connect with yourself and God today by journaling with personalized prompts to help expand and focus your thinking. 
+          Use this tool to query the wealth of information from Curt Landry Ministries.
          </p>
 
          <p className="leading-normal text-muted-foreground text-center">
